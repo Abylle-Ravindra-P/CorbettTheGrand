@@ -1,0 +1,40 @@
+.chat-container {
+  width: 350px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: Arial;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.user {
+  text-align: right;
+  margin: 6px;
+  padding: 6px;
+  background: #d1eaff;
+  border-radius: 5px;
+}
+
+.bot {
+  text-align: left;
+  margin: 6px;
+  padding: 6px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.input-box {
+  display: flex;
+  gap: 5px;
+}
+
+input {
+  flex: 1;
+  padding: 6px;
+}

@@ -15,13 +15,13 @@ h2{ font-size: 40px; line-height: 40px;}
 h3{ font-size: 30px;}
 h4{ font-size: 20px;}
 h5{ font-size: 18px;}
-.view_link{ font-size: 18px;}
-.btn-theme{ font-size: 18px;}
+.view_link,.view_link[matbutton="filled"]{ font-size: 18px;}
+.btn-theme,.btn-theme[matbutton="filled"]{ font-size: 18px;}
 
 .header__sec{ padding-left: 20px;}
 .header__sec .navbar-brand{ width: 170px;}
-.book_btn{ padding: 25px 15px; font-size: 15px;}
-.ph_btn{ font-size: 16px; padding: 11px 15px;}
+.book_btn[matbutton="filled"]{ padding: 25px 15px; font-size: 15px;}
+.ph_btn[matbutton="filled"]{ font-size: 16px; padding: 11px 15px;}
 .header__sec .navbar-light .navbar-nav .nav-item{ margin-right: 20px;}
 .header__sec .navbar-light .navbar-nav .nav-link{ font-size: 15px; padding: 25px 0;}
 .hero__sec .inner{ height: calc(100vh - 72px);}
@@ -112,8 +112,8 @@ h3{ font-size: 26px;}
 .header__sec .navbar-nav .dropdown-menu{ padding: 0 0 5px 0; margin-right: -20px;}
 .header__sec .dropdown-item{ padding: 8px 0; font-size: 17px; background: none !important; border-top: 1px solid rgba(0,0,0,0.1);}
 .header__sec .dropdown-item:hover, .header__sec .dropdown-item:focus{ color: var(--secondaryColor);}
-.book_btn{ padding: 12px 15px; font-size: 17px;}
-.ph_btn{ font-size: 17px;}
+.book_btn[matbutton="filled"]{ padding: 12px 15px; font-size: 17px;}
+.ph_btn[matbutton="filled"]{ font-size: 17px;}
 .hero__sec .detail{ max-width: 520px;}
 .hero__sec .detail p{ font-size: 16px;}
 .filter .form-block .form-control, .filter .form-block .adult_btn{ padding: 0 12px; font-size: 16px;}
@@ -200,8 +200,8 @@ h2{ font-size: 34px; line-height: 1;}
 
 .hero__sec .detail{ max-width: 100%;}
 .hero__sec .inner{ padding-bottom: 20px;}
-.filter__sec{ background: var(--primaryGradient); padding: 30px 0;}
-.filter{ display: flex; flex-wrap: wrap; justify-content: center; margin-top: 0;}
+.filter__sec{ background: var(--primaryGradient); padding: 30px 0 !important;}
+.filter{ display: flex !important; flex-wrap: wrap; justify-content: center; margin-top: 0 !important;}
 .filter .checkinout, .filter .personcount{ width: calc(50% - 10px);}
 .filter .form-block .form-control, .filter .form-block .adult_btn{ height: 46px;}
 .blog-slider .splide__arrow--prev{ left:-8px; width:36px; height:36px;}

@@ -1,0 +1,110 @@
+@media (max-width:1779px) {
+.header__sec{ padding-left: 50px;}
+.hero__sec .inner{ min-height: auto; height: calc(100vh - 90px);}
+
+.blog-slider .splide__arrow--prev{ left: -60px;}
+.blog-slider .splide__arrow--next{ right: -60px;}
+}
+
+@media (max-width:1579px) {
+body{ padding-top: 72px; font-size: 16px;}
+p{ font-size: 16px; line-height: 27px;}
+
+h1{ font-size: 75px; line-height: 80px;}
+h2{ font-size: 40px; line-height: 40px;}
+h3{ font-size: 30px;}
+h4{ font-size: 20px;}
+h5{ font-size: 18px;}
+.view_link,.view_link[matbutton="filled"]{ font-size: 18px;}
+.btn-theme,.btn-theme[matbutton="filled"]{ font-size: 18px;}
+
+.header__sec{ padding-left: 20px;}
+.header__sec .navbar-brand{ width: 170px;}
+.book_btn[matbutton="filled"]{ padding: 25px 15px; font-size: 15px;}
+.ph_btn[matbutton="filled"]{ font-size: 16px; padding: 11px 15px;}
+.header__sec .navbar-light .navbar-nav .nav-item{ margin-right: 20px;}
+.header__sec .navbar-light .navbar-nav .nav-link{ font-size: 15px; padding: 25px 0;}
+.hero__sec .inner{ height: calc(100vh - 72px);}
+.hero__sec .detail{ max-width: 650px;}
+.hero__sec .detail p{ font-size: 20px;}
+.filter .form-block .form-control, .filter .form-block .adult_btn{ height: 52px;}
+.welcome__sec .detail{ padding-left: 40px;}
+.welcome__sec figure img{ width: 500px;}
+ul.list__style1 li{ line-height: normal;}
+.experience_item .img_box{ height: 350px;}
+.tariff_item figure{ height: 280px;}
+.tariff_item .price{ font-size: 18px;}
+.tariff_item .price small{ font-size: 85%;}
+.blog-slider{ padding: 0 40px;}
+.blog-slider .splide__arrow--prev{ left: -30px;}
+.blog-slider .splide__arrow--next{ right: -30px;}
+.leftright__sec .detail{ padding-left: 5%; padding-right: 30px;}
+.leftright__sec .flex-row-reverse .detail{ padding-left: 30px; padding-right: 5%;}
+.testi_main-slider p{ font-size: 22px; line-height: 37px;}
+.foot_list li{ font-size: 16px;}
+
+/* About Us Page */
+.about__sec h5{ line-height: 30px;}
+.counter_item strong{ font-size: 80px;}
+.misvis_item{ max-width: 319px;}
+
+/* Accommodation Page */
+.accommodation__sec h5{ line-height: 30px;}
+.accomodation_block .right_detail{ padding-left: 30px;}
+.pricebook .price{ padding: 7px 10px 8px 15px;}
+.pricebook .price strong{ font-size: 22px;}
+.reviews_info .reviews_head{ padding-left: 20px;}
+.reviews_info .reviews_body { padding: 22px 20px 25px 20px;}
+.reviews-slider .splide__arrows{ right: -20px;}
+.accomodation_list{ grid-template-columns: 0.8fr 1fr;}
+.accomodation_list .item{ padding: 10px 6px 10px 10px;}
+.accomodation_list .item p{ font-size: 14px; line-height: normal;}
+
+/* facilities page */
+.facilities_card .caption{ padding: 20px 30px;}
+.facilities_card > img{ height: 420px;}
+
+/* Book a Room page */
+.book-accordion .accordion-button{ font-size: 22px;}
+.bookroom_aside{ padding-left: 0;}
+.aside-accordion .accordion-button{ font-size: 18px;}
+.book-accordion .edit-link{ font-size: 16px;}
+.default-calendar .datepicker td{ width: 37px; height: 37px;}
+.default-calendar .datepicker table tr td span { height: 60px; line-height: 60px;}
+.corpoadd-info p{ font-size: 14px; line-height: 23px;}
+.corpoadd-info p b{ font-size: 18px;}
+.aside-accordion p{ font-size: 14px; line-height: 23px;}
+.product_card h4 span{ display: block;}
+.product_card .max_lists{ display: block;}
+.product_card .max_lists .max_list{ padding-right: 0; margin-right: 0; border: none; display: flex;}
+.product_card .price_dtl strong{ font-size: 22px;}
+.btn-theme.sm{ font-size: 13px;}
+.price_cate_list{ gap: 10px 15px;}
+.price_cate_list span{ font-size: 18px;}
+.btn-theme.md{ min-width: 100px;}
+.table thead tr th, .table tbody tr td{ white-space: nowrap; font-size: 15px;}
+.booking-detail-table .item{ padding: 7px 10px; gap: 20px; font-size: 15px;}
+.booking-detail-table .item b{ min-width: auto;}
+
+/* Weddings page */
+.wedding__sec h5{ line-height: 30px;}
+.surrounded__sec .detail{ max-width: 552px;}
+}
+
+@media (max-width:1199px) {
+h1{ font-size: 54px; line-height: 1;}
+h2{ font-size: 34px; line-height: 1;}
+h3{ font-size: 26px;}
+
+.py-120, .pt-120{ padding-top: 80px;}
+.py-120, .pb-120{ padding-bottom: 80px;}
+.pb-80{ padding-bottom: 60px;}
+.mt-80{ margin-top: 40px;}
+
+.header__sec{ padding: 6px 5%; min-height: 72px;}
+.navbar-toggler{ background:none; border:none; position:relative; right:0; top:0; box-shadow:none !important;}
+.header__sec .offcanvas { background:var(--whiteColor); width: 100%; max-width: 360px;}
+.header__sec .offcanvas-end-xl { top: 0; right: -1px; border: none; transform: translateX(100%);} 
+/* ... trimmed for brevity ... */
+
+}

@@ -2,7 +2,7 @@
 <section class="hero__sec">
 
 	<div class="video-hero jquery-background-video-wrapper demo-video-wrapper">
-			<figure class="video_image"><img rel="preload" src="images/hero-img2.png" height="1000" width="1920" alt="hero img"></figure>
+			<!-- <figure class="video_image"><img rel="preload" src="images/hero-img2.png" height="1000" width="1920" alt="hero img"></figure> -->
 			<video class="jquery-background-video" autoplay muted loop playsinline rel="preload">
 					<source rel="preload" src="images/hero-video.mp4" type="video/mp4">
 			</video>
@@ -23,38 +23,60 @@
 			<div class="checkinout">
 				<div class="form-block">
 					<label>Check In</label>
-					<input type="text" class="form-control" id="datepicker1" placeholder="19 Jun, 2025" required />
+					<mat-form-field>
+						<mat-label>Choose a date</mat-label>
+						<input matInput [matDatepicker]="CheckIn">
+						<mat-datepicker-toggle matIconSuffix [for]="CheckIn"></mat-datepicker-toggle>
+						<mat-datepicker #CheckIn></mat-datepicker>
+					</mat-form-field>
 				</div>
 				<div class="form-block">
 					<label>Check Out</label>
-					<input type="text" class="form-control" id="datepicker2" placeholder="25 Jun, 2025" required/>
+					<mat-form-field>
+						<mat-label>Choose a date</mat-label>
+						<input matInput [matDatepicker]="CheckOut">
+						<mat-datepicker-toggle matIconSuffix [for]="CheckOut"></mat-datepicker-toggle>
+						<mat-datepicker #CheckOut></mat-datepicker>
+					</mat-form-field>
 				</div>
 			</div>
 			<div class="personcount">
 				<div class="form-block guests-input">
 					<label>Adults</label>
-					<button class="adult_btn">Adults</button>
-					<div class="guests-input__options">
-						<div>
-							<span class="guests-input__ctrl minus">-</span>
-							<span class="guests-input__value"><span>3</span>Adults</span>
-							<span class="guests-input__ctrl plus">+</span>
-						</div>
-					</div>
+					<mat-accordion>
+						<mat-expansion-panel hideToggle>
+							<mat-expansion-panel-header>
+								<mat-panel-title>Adults</mat-panel-title>
+							</mat-expansion-panel-header>
+							<div class="guests-input__options">
+								<div>
+									<span class="guests-input__ctrl minus">-</span>
+									<span class="guests-input__value"><span>3</span>Adults</span>
+									<span class="guests-input__ctrl plus">+</span>
+								</div>
+							</div>
+						</mat-expansion-panel>
+					</mat-accordion>
 				</div>
 				<div class="form-block guests-input guests-input2">
 					<label>Children</label>
-					<button class="adult_btn">Children</button>
-					<div class="guests-input__options">
-						<div>
-							<span class="guests-input__ctrl minus">-</span>
-							<span class="guests-input__value"><span>2</span>Children</span>
-							<span class="guests-input__ctrl plus">+</span>
-						</div>
-					</div>
+					<mat-accordion>
+						<mat-expansion-panel hideToggle>
+							<mat-expansion-panel-header>
+								<mat-panel-title>Children</mat-panel-title>
+							</mat-expansion-panel-header>
+							<div class="guests-input__options">
+								<div>
+									<span class="guests-input__ctrl minus">-</span>
+									<span class="guests-input__value"><span>2</span>Children</span>
+									<span class="guests-input__ctrl plus">+</span>
+								</div>
+							</div>
+						</mat-expansion-panel>
+					</mat-accordion>
 				</div>
 			</div>
-			<button class="btn-theme">Book Now</button>
+			<button matButton="filled" class="btn-theme">Book Now</button>
 		</div>
 	</div>
 </section>
@@ -63,8 +85,8 @@
 <section class="welcome__sec py-120">
 	<div class="container">
 		<div class="row flex-row-reverse gx-0">
-			<div class="col-lg-7 col-xl align-self-end">
-				<div class="detail" data-aos="fade-left">
+			<div class="col-lg-7 col-xl-7 align-self-end">
+				<div class="detail">
 					<h2 class="sec-title">About Corbett The Grand</h2>
 					<h5>Life is all about perspectives and the fun lies in comprehending it.</h5>
 					<p>At Corbett The Grand, we realise the magnitude of the idea called Corbett National Park and bring to you the very same perspective both in terms of scale and purpose. Our resort is a product of our love for <b>Kumaun and its unique culture.</b> In every aspect of our resort, you shall find a touch of our concern for the local ecosystem and traditions.</p>
@@ -76,7 +98,7 @@
 								<li>100 plush Cottages and Rooms</li>
 								<li>18 acres of landscaped gardens</li>
 							</ul>
-							<a href="#" class="btn-theme">Learn More</a>
+							<a matButton="filled" href="#" class="btn-theme">Learn More</a>							
 						</div>
 						<div class="col-md-6">
 							<div class="image"><img src="images/welcome-img2.jpg" alt=""></div>
@@ -84,8 +106,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-5 col-xl-auto">
-				<figure data-aos="fade-right"><img src="images/welcome-img.jpg" alt=""></figure>
+			<div class="col-lg-5 col-xl-5">
+				<figure><img src="images/welcome-img.jpg" alt=""></figure>
 			</div>
 		</div>
 	</div>
@@ -93,13 +115,13 @@
 
 <!-- Experiences -->
 <section class="experience__sec pt-120">
-	<div class="container sm" data-aos="fade-up">
+	<div class="container sm">
 		<h2 class="sec-title white">Our Experiences</h2>
 		<p class="white mb-30">Every team member in the resort proudly  puts in hours of hard work, often in challenging conditions only to put a smile across your face. The precious little gift that we seek from each of our guests!</p>
 	</div>
 	<div class="row">
 		<div class="col-md-4">
-			<div class="experience_item" data-aos="fade-up">
+			<div class="experience_item">
 				<div class="img_box">
 					<a href="#">
 						<img src="images/pool-img04.jpg" alt="">
@@ -110,7 +132,7 @@
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="experience_item"  data-aos="fade-up">
+			<div class="experience_item" >
 				<div class="img_box">
 					<a href="#">
 						<img src="images/emperience_img2.jpg" alt="">
@@ -121,7 +143,7 @@
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="experience_item" data-aos="fade-up">
+			<div class="experience_item">
 				<div class="img_box">
 					<a href="#">
 						<img src="images/ind_out.jpg" alt="">
@@ -137,41 +159,41 @@
 <!-- Tariff -->
 <section class="tariff__sec py-120">
 	<div class="container">
-		<div class="text-center" data-aos="fade-up">
+		<div class="text-center">
 			<h2 class="sec-title">Rooms & Cottages</h2>
 			<p class="mb-30">Thank you for your interest in our resort. We have the largest inventory in the region and our rooms are also the most spacious in the vicinity. Spread out over 18 acres of landscaped gardens, overlooking the Kosi River, the rooms and cottages welcome you like never before.</p>
 		</div>
 		<div class="row gy-4">
 			<div class="col-xl-3 col-lg-3 col-sm-6">
-				<div class="tariff_item" data-aos="fade-up">
+				<div class="tariff_item">
 					<figure><a href="#"><img src="images/tariff_img1.jpg" alt=""></a></figure>
 					<h4><a href="#">Plunge Pool Cottages</a></h4>
 					<div class="price">₹7,000 <small>/ Night</small></div>
-					<button class="btn-theme">Book Now</button>
+					<button matButton="filled" class="btn-theme">Book Now</button>
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-sm-6">
-				<div class="tariff_item" data-aos="fade-up">
+				<div class="tariff_item">
 					<figure><a href="#"><img src="images/tariff_img2.jpg" alt=""></a></figure>
 					<h4><a href="#">Superior Cottages</a></h4>
 					<div class="price">₹7,000 <small>/ Night</small></div>
-					<button class="btn-theme">Book Now</button>
+					<button matButton="filled" class="btn-theme">Book Now</button>
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-sm-6">
-				<div class="tariff_item" data-aos="fade-up">
+				<div class="tariff_item">
 					<figure><a href="#"><img src="images/tariff_img3.jpg" alt=""></a></figure>
 					<h4><a href="#">Superior Room</a></h4>
 					<div class="price">₹7,000 <small>/ Night</small></div>
-					<button class="btn-theme">Book Now</button>
+					<button matButton="filled" class="btn-theme">Book Now</button>
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-sm-6">
-				<div class="tariff_item" data-aos="fade-up">
+				<div class="tariff_item">
 					<figure><a href="#"><img src="images/tariff_img4.jpg" alt=""></a></figure>
 					<h4><a href="#">Deluxe Rooms</a></h4>
 					<div class="price">₹7,000 <small>/ Night</small></div>
-					<button class="btn-theme">Book Now</button>
+					<button matButton="filled" class="btn-theme">Book Now</button>
 				</div>
 			</div>
 		</div>
@@ -182,20 +204,20 @@
 <section class="leftright__sec">
 	<div class="row gx-0 flex-row-reverse">
 		<div class="col-md-6 align-self-center">
-			<div class="detail" data-aos="fade-left">
+			<div class="detail">
 				<h2 class="sec-title">Weddings at Corbett <br> The Grand</h2>
 				<p class="mb-30">Weddings are beautiful with stunning landscapes, soothing weather, a  lush garden setting for your ceremony and a warm reception room. Corbett the Grand is the ideal choice for your destination wedding. Corbett the Grand meets all of your needs with a <b>100 room accommodation</b>, four spacious,  air-conditioned, versatile meeting and function venues, opening out to the pool & gardens, beautifully landscaped gardens, party lawns to  cater up to <b>2000 people</b> and the reserve. Indoor and outdoor areas for  breakout and catering.</p>
-				<a href="#" class="btn-theme">Book Now</a>
+				<button matButton="filled" class="btn-theme">Book Now</button>
 			</div>
 		</div>
 		<div class="col-md-6"><figure><img src="images/wedding_img.jpg" alt=""></figure></div>
 	</div>
 	<div class="row gx-0">
 		<div class="col-md-6 align-self-center">
-			<div class="detail" data-aos="fade-right">
+			<div class="detail">
 				<h2 class="sec-title">The famous jungles of Corbett National Park</h2>
 				<p class="mb-30">The famous jungles of Corbett National Park is a testimony to man’s  determination to secure places for wildlife to thrive and we are committed to keep it so. We aspire to promote responsible tourism in this <b>environmentally fragile zone</b> and are proud of our strong inclination towards promoting the indigenous ways of the local folk in its totality. At our resort you get a flavour of the legendary Kumauni  hospitality in its absolute entirety.</p>
-				<a href="#" class="btn-theme">Book Now</a>
+				<button matButton="filled" class="btn-theme">Book Now</button>
 			</div>
 		</div>
 		<div class="col-md-6"><figure><img src="images/famous_img.jpg" alt=""></figure></div>
@@ -206,46 +228,46 @@
 <section class="facilities__sec py-120">
 	<img class="bg_img" src="images/facilities_bg.jpg" alt="">
 	<div class="container">
-		<h2 class="sec-title white mb-4 mb-lg-5" data-aos="fade-up">Facilities</h2>
+		<h2 class="sec-title white mb-4 mb-lg-5">Facilities</h2>
 		<div class="facilities_grid">
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic1.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic1.svg" alt=""></figure>
 				<h4>Spa</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic2.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic2.svg" alt=""></figure>
 				<h4>Discotheque</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic3.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic3.svg" alt=""></figure>
 				<h4>Boating</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic4.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic4.svg" alt=""></figure>
 				<h4>Adventure Activites</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic5.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic5.svg" alt=""></figure>
 				<h4>Jacuzzi</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic6.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic6.svg" alt=""></figure>
 				<h4>Outdoor Kids Zone</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic7.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic7.svg" alt=""></figure>
 				<h4>Mini Theatre</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic8.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic8.svg" alt=""></figure>
 				<h4>Indoor Play Zone</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic9.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic9.svg" alt=""></figure>
 				<h4>Party Lawns</h4>
 			</div>
 			<div class="facilities_item">
-				<figure data-aos="zoom-in"><img src="images/facilities_ic10.svg" alt=""></figure>
+				<figure><img src="images/facilities_ic10.svg" alt=""></figure>
 				<h4>Swimming Pool</h4>
 			</div>
 		</div>
@@ -255,7 +277,7 @@
 <!-- Testimonial -->
 <section class="testimonial__sec py-120">
 	<div class="container md">
-		<h2 class="sec-title" data-aos="fade-right">What People Are Saying</h2>
+		<h2 class="sec-title">What People Are Saying</h2>
 		<div class="testi-slider">
 			<div class="splide testi_main-slider">
 				<div class="splide__track">
@@ -308,8 +330,8 @@
 <!-- Spotlight -->
 <section class="spotlight__sec py-120">
 	<div class="container">
-		<h2 class="sec-title text-center mb-30" data-aos="fade-up">corbett the grand in Spotlight</h2>
-		<div class="spotlight_item"  data-aos="fade-up">
+		<h2 class="sec-title text-center mb-30">corbett the grand in Spotlight</h2>
+		<div class="spotlight_item" >
 			<figure><img src="images/spotlight_img.jpg" alt=""></figure>
 			<div class="caption">
 				<div>
@@ -325,7 +347,7 @@
 <!-- Gallery -->
 <section class="gallery__sec py-120">
 	<div class="container">
-		<h2 class="sec-title text-center mb-4 mb-lg-5"  data-aos="fade-up">Gallery</h2>
+		<h2 class="sec-title text-center mb-4 mb-lg-5" >Gallery</h2>
 	</div>
 	<div class="splide gallery_marqee" id="Gallerymarqee1">
 		<div class="splide__track">

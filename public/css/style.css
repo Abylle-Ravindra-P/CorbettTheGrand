@@ -28,7 +28,7 @@
 
 /* Basics */
 html{ overflow-x: hidden; scrollbar-color: var(--primaryColor) lightgray; scrollbar-width: thin;}
-body{ padding:90px 0 0; margin:0; font-size: 17px; color:var(--txtColor); font-family: var(--bodyFont); overflow-x: hidden;}
+body{ padding:90px 0 0; margin:0; font-size: 17px; color:var(--txtColor); font-family: var(--bodyFont); line-height: 1.5;}
 a, button{outline:none !important; text-decoration:none; box-shadow:none; transition:all .3s ease-in-out;}
 a:hover, a:focus, select:focus, button:focus,.btn:focus,btn.focus { outline:none; text-decoration:none; box-shadow:none;}
 * { margin:0; padding:0;}
@@ -75,14 +75,14 @@ h5 a{ color: var(--txtColor);}
 .mb-30{ margin-bottom: 30px !important;}
 
 /* Button */
-.btn-theme{ padding: 12px 30px 13px 30px; margin: 0; font-size: 20px; font-weight: bold; color: var(--blackColor); background: var(--primaryColor); border-radius: 0; border: none; display: inline-flex; font-family: var(--fancyFont); text-transform: uppercase; box-shadow: 0 0 0 0 var(--primaryColor) inset; align-items: center; justify-content: center;}
-.btn-theme:hover{ background: var(--light-primaryColor); color: var(--blackColor); box-shadow: 0 0 0 3px var(--primaryColor) inset;}
-.btn-theme.secondary{ background: var(--secondaryColor); color: var(--whiteColor);}
-.btn-theme.secondary:hover{ background: var(--light-secondaryColor); color: var(--whiteColor); box-shadow: 0 0 0 3px var(--secondaryColor) inset;}
+.btn-theme, .btn-theme[matbutton="filled"]{ padding: 15px 30px 15px 30px; margin: 0; font-size: 20px; line-height: normal; height: auto; min-width: auto; font-weight: bold; color: var(--blackColor) !important; background: var(--primaryColor) !important; border-radius: 0; border: none; display: inline-flex; font-family: var(--fancyFont); text-transform: uppercase; box-shadow: 0 0 0 0 var(--primaryColor) inset; align-items: center; justify-content: center; letter-spacing: normal;}
+.btn-theme:hover{ background: var(--light-primaryColor) !important; color: var(--blackColor) !important; box-shadow: 0 0 0 3px var(--primaryColor) inset;}
+.btn-theme.secondary{ background: var(--secondaryColor) !important; color: var(--whiteColor) !important;}
+.btn-theme.secondary:hover{ background: var(--light-secondaryColor) !important; color: var(--whiteColor) !important; box-shadow: 0 0 0 3px var(--secondaryColor) inset;}
 .btn-theme.sm{ padding:4px 15px; font-size: 15px; box-shadow: none !important;}
 .btn-theme.md{ padding: 7px 15px 6px; font-size: 18px; min-width: 126px;}
-.btn-theme.secondary.transparent{ background: transparent; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2); color: var(--secondaryColor);}
-.btn-theme.secondary.transparent:hover{ background: var(--secondaryColor); box-shadow: inset 0 0 0 1px var(--secondaryColor); color: var(--whiteColor);}
+.btn-theme.secondary.transparent{ background: transparent !important; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2); color: var(--secondaryColor) !important;}
+.btn-theme.secondary.transparent:hover{ background: var(--secondaryColor) !important; box-shadow: inset 0 0 0 1px var(--secondaryColor); color: var(--whiteColor) !important;}
 
 /* Input */
 .form-control{ height: 50px; font-size: 16px; color: var(--titleColor); background: var(--whiteColor); border: 1px solid var(--borderColor) !important; padding: 0 20px; border-radius: 0;}
@@ -111,13 +111,13 @@ textarea.form-control{ padding: 10px 20px; height: 100px;}
 .header__sec .dropdown-item{ padding: 8px 20px; color: var(--titleColor); font-weight: 400; font-family: var(--bodyFont);}
 .header__sec .dropdown-item:hover, .header__sec .dropdown-item:focus{ background: var(--secondaryColor); color: var(--whiteColor);}
 
-.book_btn{ padding: 30px 30px; margin: 0; font-size: 20px; font-weight: bold; font-family: var(--fancyFont); color: var(--blackColor); text-transform: uppercase; display: inline-flex; background: var(--primaryColor); justify-content: center; text-align: center;}
-.book_btn:hover{ background: var(--light-primaryColor); color: var(--blackColor);}
+.book_btn[matbutton="filled"]{ padding: 30px 30px; margin: 0; font-size: 20px; font-weight: bold; font-family: var(--fancyFont); color: var(--blackColor) !important; text-transform: uppercase; display: inline-flex; background: var(--primaryColor) !important; justify-content: center; text-align: center; border-radius: 0 !important; height: auto !important;}
+.book_btn[matbutton="filled"]:hover{ background: var(--light-primaryColor) !important; color: var(--blackColor) !important;}
 
-.ph_btn{ margin: 0 20px 0 0; padding: 11px 20px; font-size: 18px; color: var(--secondaryColor); background: transparent; border: 1px solid var(--secondaryColor); font-family: var(--fancyFont); gap: 6px; display: inline-flex; align-items: center; justify-content: center; text-align: center;}
-.ph_btn img{ transition:all .3s ease-in-out;}
-.ph_btn:hover{ background: var(--secondaryColor); color: var(--whiteColor);}
-.ph_btn:hover img{ filter: brightness(0) invert(1);}
+.ph_btn[matbutton="filled"]{ margin: 0 20px 0 0; padding: 11px 20px; font-size: 18px; color: var(--secondaryColor) !important; background: transparent !important; border: 1px solid var(--secondaryColor) !important; font-family: var(--fancyFont); gap: 6px; display: inline-flex; align-items: center; justify-content: center; text-align: center; border-radius: 0 !important; height: auto !important;}
+.ph_btn[matbutton="filled"] img{ transition:all .3s ease-in-out;}
+.ph_btn[matbutton="filled"]:hover{ background: var(--secondaryColor) !important; color: var(--whiteColor) !important;}
+.ph_btn[matbutton="filled"]:hover img{ filter: brightness(0) invert(1);}
 
 @media (min-width: 1200px) {
 .header__sec .offcanvas { visibility: visible; position: relative; background: none; border: none; justify-content: end; }
@@ -208,9 +208,9 @@ section{ padding:0; margin:0;}
 
 /* Filter */
 .filter{ display: grid; grid-template-columns: 1fr 1fr auto; gap: 20px; align-items: flex-end; margin-top: -107px; position: relative; z-index: 55;}
-.filter .checkinout, .filter .personcount{ display: flex;}
+.filter .checkinout, .filter .personcount{ display: flex; position: relative; z-index: 2;}
 .filter .form-block{ margin: 0; padding: 0; flex: 1 0 0; position: relative;}
-.filter .form-block label{ margin: 0 0 7px; display: block; font-weight: 600; color: var(--whiteColor); text-transform: uppercase;}
+.filter .form-block label{ margin: 0 0 7px; display: block; font-weight: 600; color: var(--whiteColor); text-transform: uppercase; overflow: hidden; width:100%; display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;}
 .filter .form-block .form-control{ width: 100%; height: 55px; padding: 0 23px; font-size: 17px; color: var(--txtColor); border: 1px solid #B3B3B3 !important; border-radius: 0; box-shadow: none; background: var(--whiteColor);}
 .filter .form-block + .form-block .form-control, .filter .form-block + .form-block .adult_btn{ border-left: none;}
 .filter .form-block .adult_btn{ width: 100%; height: 55px; padding: 0 23px; font-size: 17px; color: var(--txtColor); border: 1px solid #B3B3B3; border-radius: 0; box-shadow: none; background: var(--whiteColor); text-align: left;}
@@ -232,7 +232,7 @@ section{ padding:0; margin:0;}
 .datepicker-dropdown.datepicker table tr td span{ height: 45px; line-height: 45px;}
 
 /* Guest Qty */
-.guests-input__options { position: absolute; width: 100%; background-color: var(--whiteColor); border-radius: 0; overflow: hidden; height: 0; opacity: 0;  -webkit-transition: all .1s linear; transition: all .1s linear;}
+.guests-input__options { /*position: absolute;*/ width: 100%; background-color: var(--whiteColor); border-radius: 0; /*overflow: hidden; height: 0; opacity: 0;*/  -webkit-transition: all .1s linear; transition: all .1s linear;}
 .guests-input__options.open { opacity: 1; height: 47px; box-shadow: 0 5px 10px rgba(0,0,0,0.1);}
 .guests-input__options>div { padding: 10px 0; text-align: center; display: flex; align-items: center; justify-content: center;}
 .guests-input__ctrl { display: inline-block; width:24px; height:24px; border:2px solid var(--secondaryColor); font-size:20px; background:none; color:var(--secondaryColor); line-height:19px; border-radius:50%; font-weight:700; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;  -webkit-transition: all .2s ease; transition: all .2s ease;}
@@ -411,6 +411,7 @@ ul.list__style2 li::before{ content: ""; width: 25px; min-width: 25px; height: 2
 .pricebook .price{ padding: 7px 30px 8px 30px; background: var(--secondaryColor); flex: 1 0 0; color: var(--whiteColor);}
 .pricebook .price strong{ font-size: 25px; color: var(--whiteColor); line-height: normal;}
 .pricebook .price small{ display: block; font-size: 15px; color: var(--whiteColor);}
+.accomodation_block .row{margin-bottom: 20px;}
 
 .reviews_info{ border: 1px solid var(--borderColor); margin-top: 15px;}
 .reviews_info .reviews_head{ padding: 12px 70px 12px 30px; border-bottom: 1px solid var(--borderColor);}
@@ -552,8 +553,8 @@ ul.disc_list li{ margin: 10px 0; padding: 0 0 0 4px; line-height: 25px; font-wei
 .coupon-form.input-group label{ font-size: 16px; font-weight: 600; color: var(--txtColor); padding-right: 10px;}
 .coupon-form.input-group .form-control{ height: 40px;}
 .coupon-form.input-group .form-control::placeholder{ opacity: 0.7;}
-.coupon-btn{ padding: 8px 20px; font-size: 16px; font-weight: 600; background: var(--secondaryColor); color: var(--whiteColor); border: none;}
-.coupon-btn:hover{ background: var(--light-secondaryColor); color: var(--whiteColor);}
+.coupon-btn, .coupon-btn[matbutton="filled"]{ padding: 8px 20px; font-size: 16px; font-weight: 600; background: var(--secondaryColor) !important; color: var(--whiteColor) !important; border: none; border-radius: 0 !important;}
+.coupon-btn:hover, .coupon-btn[matbutton="filled"]:hover{ background: var(--light-secondaryColor); color: var(--whiteColor);}
 
 /*=============================
         Weddings page
@@ -624,6 +625,7 @@ ul.disc_list li{ margin: 10px 0; padding: 0 0 0 4px; line-height: 25px; font-wei
 .gallery-filter button:not(.active):hover{ color: var(--secondaryColor);}
 .gallery-filter button.active { background: var(--secondaryColor); color: var(--whiteColor);}
 .gallery-container{ margin-bottom: 35px;}
+.gallery-item a{ display: flex; height: 100%;}
 .gallery-item img { width: 100%; display: block; object-fit: cover;}
 
 @media(max-width:768px){

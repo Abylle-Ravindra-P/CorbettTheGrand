@@ -3,8 +3,8 @@
 	<nav class="navbar navbar-expand-xl navbar-light p-0">
 		<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
 		<div class="d-flex position-relative order-xl-3 align-items-center nav-btnss">
-			<a href="#" class="ph_btn d-none d-xl-inline-flex"><img src="images/ph-ic.svg" alt=""> +91-8958988800</a>
-			<a routerLink="/book-a-room" class="book_btn d-none d-xl-inline-flex">Book a Room</a>
+			<a matButton="filled" href="#" class="ph_btn d-none d-xl-inline-flex"><img src="images/ph-ic.svg" alt=""> +91-8958988800</a>
+			<a matButton="filled" routerLink="/book-a-room" class="book_btn d-none d-xl-inline-flex">Book a Room</a>
 			<button class="btn border-0 navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"  aria-controls="offcanvasExample">
 				<span class="visually-hidden">Toggle Navigation</span>
 				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="26" viewBox="0 0 40 26" fill="none">
@@ -25,9 +25,10 @@
 			</div>
 			<div class="offcanvas-body pt-0 px-3 px-xl-0 pb-3 pb-xl-0 d-flex flex-column justify-content-between justify-content-xl-center">
 				<ul class="navbar-nav ms-xl-auto">
-					<li class="nav-item"><a class="nav-link active" routerLink="/">Home</a></li>
-					<li class="nav-item"><a class="nav-link" routerLink="/about-us">About Us</a></li>
-					<li class="nav-item dropdown">
+					<li class="nav-item"><a class="nav-link active" routerLink="/" routerLinkActive="active">Home</a></li>
+					<li class="nav-item"><a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a></li>
+					<li class="nav-item"><a class="nav-link" routerLink="/accommodation" >Rooms & Cottages</a></li>
+					<!-- <li class="nav-item dropdown">
 						<a routerLink="/accommodation" class="nav-link">Rooms & Cottages</a>
 						<a href="#" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
 						<ul class="dropdown-menu">
@@ -36,7 +37,7 @@
 							<li><a class="dropdown-item" routerLink="/premium-cottages">Premium Cottages</a></li>
 							<li><a class="dropdown-item" routerLink="/plunge-pool">Plunge Pool</a></li>
 						</ul>
-					</li>		
+					</li>		 -->
 					<li class="nav-item dropdown">
 						<a routerLink="/facilities" class="nav-link">Facilities</a>
 						<a href="#" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
@@ -55,8 +56,8 @@
 					<li class="nav-item"><a class="nav-link" routerLink="/contact">Contact</a></li>
 				</ul>
 				<div class="flex-column mt-3 gap-3 d-flex d-xl-none">
-					<a href="#" class="ph_btn m-0"><img src="images/ph-ic.svg" alt=""> +91-8958988800</a>
-					<a routerLink="/book-a-room" class="book_btn m-0">Book a Room</a>
+					<a matButton="filled" href="#" class="ph_btn m-0"><img src="images/ph-ic.svg" alt=""> +91-8958988800</a>
+					<a matButton="filled" routerLink="/book-a-room" class="book_btn m-0">Book a Room</a>
 				</div>
 			</div>
 		</div>

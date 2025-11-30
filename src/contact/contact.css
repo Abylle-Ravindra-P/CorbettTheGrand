@@ -1,0 +1,9 @@
+.filter .form-block + .form-block ::ng-deep .mdc-text-field--filled{ border-left: none !important;}
+::ng-deep .mat-mdc-form-field{ display: flex !important;}
+::ng-deep .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper{ padding-right: 10px !important;}
+::ng-deep .mat-mdc-form-field-infix{ min-height: 53px !important; padding-top: 21px !important; padding-bottom: 8px !important;}
+::ng-deep .mdc-text-field--filled { border: 1px solid var(--borderColor) !important; border-radius: 0 !important; box-shadow: none !important; background: var(--whiteColor) !important;}
+::ng-deep .mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label{ font-size: 17px; color: var(--txtColor) !important; font-weight: 400; text-transform: unset;}
+::ng-deep .mat-mdc-form-field .mat-mdc-form-field-subscript-wrapper{ display: none !important;}
+::ng-deep .mat-mdc-form-field .mdc-line-ripple{ display: none !important;}
+.form-group ::ng-deep textarea{ height: 90px;}

@@ -24,10 +24,11 @@
 			<div class="item">
 				<h4>Rooms & Cottages</h4>
 				<ul class="foot_list">
-					<li><a routerLink="/superior">Superior</a></li>
-					<li><a routerLink="/classic-cottages">Classic Cottages</a></li>
-					<li><a routerLink="/premium-cottages">Premium Cottages</a></li>
-					<li><a routerLink="/plunge-pool">Plunge Pool</a></li>
+					<li><a [routerLink]="['/accommodation']" fragment="Superior">Superior</a></li>
+					<li><a [routerLink]="['/accommodation']" fragment="Classic">Classic Cottages</a></li>
+					<li><a [routerLink]="['/accommodation']" fragment="Premium">Premium Cottages</a></li>
+					<li><a [routerLink]="['/accommodation']" fragment="Plunge">Plunge Pool</a></li>
+					<li><a [routerLink]="['/accommodation']" fragment="Deluxe">Deluxe Rooms</a></li>
 				</ul>
 			</div>
 			<div class="item">
