@@ -18,11 +18,16 @@ export class Weddings implements AfterViewInit {
       setTimeout(() => {
         this.initGallery1();
         this.initGallery2();
+        this.initFaqAccordion();   // <-- FAQ Activation
       }, 300);
     }
   }
 
-  //  SLIDER 1
+  
+
+  /** -------------------------------
+   *   SLIDER 1
+   *  ------------------------------- */
   private initGallery1(): void {
     const el = document.getElementById('Gallerymarqee1');
     if (!el) return;
@@ -47,7 +52,9 @@ export class Weddings implements AfterViewInit {
     }).mount((window as any).splide.Extensions);
   }
 
-  //  SLIDER 2 (RTL)
+  /** -------------------------------
+   *   SLIDER 2 (RTL)
+   *  ------------------------------- */
   private initGallery2(): void {
     const el = document.getElementById('Gallerymarqee2');
     if (!el) return;
@@ -72,4 +79,35 @@ export class Weddings implements AfterViewInit {
       }
     }).mount((window as any).splide.Extensions);
   }
+
+
+/** -------------------------------
+   *   FAQ ACCORDION ACTIVE CLASS
+   *  ------------------------------- */
+  private initFaqAccordion(): void {
+    const items = document.querySelectorAll('.faq__accordion .accordion-item');
+
+    items.forEach((item) => {
+      const collapseEl = item.querySelector('.accordion-collapse');
+
+      if (!collapseEl) return;
+
+      // If element is already opened on load
+      if (collapseEl.classList.contains('show')) {
+        item.classList.add('active');
+      }
+
+      // When collapse opens
+      collapseEl.addEventListener('shown.bs.collapse', () => {
+        item.classList.add('active');
+      });
+
+      // When collapse closes
+      collapseEl.addEventListener('hidden.bs.collapse', () => {
+        item.classList.remove('active');
+      });
+    });
+  }
+
+
 }

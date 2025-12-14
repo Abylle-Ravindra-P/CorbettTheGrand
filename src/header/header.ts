@@ -1,13 +1,28 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import {MatButtonModule} from '@angular/material/button';
+import { RouterModule, Router } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+
+declare var bootstrap: any; // Required for Bootstrap Offcanvas JS
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, MatButtonModule],
+  standalone: true,
+  imports: [RouterModule, MatButtonModule],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrls: ['./header.css']
 })
 export class Header {
 
+  constructor(private router: Router) {}
+
+  closeMenu() {
+    const offcanvasEl = document.getElementById('offcanvasExample');
+    if (!offcanvasEl) return;
+
+    const instance =
+      bootstrap.Offcanvas.getInstance(offcanvasEl) ||
+      new bootstrap.Offcanvas(offcanvasEl);
+
+    instance.hide();
+  }
 }

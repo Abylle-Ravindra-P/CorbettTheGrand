@@ -1,13 +1,19 @@
-import { Component, ChangeDetectionStrategy, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  AfterViewInit,
+  Inject,
+  PLATFORM_ID,
+  ViewChild
+} from '@angular/core';
+
 import { isPlatformBrowser } from '@angular/common';
-import { Header } from '../header/header';
-import { Footer } from '../footer/footer';
-import { MatButtonModule } from '@angular/material/button';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
 
 declare var Splide: any;
 
@@ -27,10 +33,47 @@ declare var Splide: any;
 })
 export class Home implements AfterViewInit {
 
+  // -----------------------
+  // GUEST COUNTS
+  // -----------------------
+  adults: number = 1;
+  children: number = 0;
+
+  @ViewChild('adultsPanel') adultsPanel!: MatExpansionPanel;
+  @ViewChild('childrenPanel') childrenPanel!: MatExpansionPanel;
+
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
+  // -----------------------
+  // COUNTER LOGIC
+  // -----------------------
+  increaseAdults() { this.adults++; }
+  decreaseAdults() { if (this.adults > 1) this.adults--; }
+
+  increaseChildren() { this.children++; }
+  decreaseChildren() { if (this.children > 0) this.children--; }
+
+  // -----------------------
+  // OUTSIDE CLICK - CLOSE DROPDOWNS
+  // -----------------------
+  private setupOutsideClickClose() {
+    document.addEventListener('click', (event: any) => {
+      const inside = event.target.closest('.guests-input');
+      if (!inside) {
+        if (this.adultsPanel) this.adultsPanel.close();
+        if (this.childrenPanel) this.childrenPanel.close();
+      }
+    });
+  }
+
+  // -----------------------
+  // INITIALIZATION
+  // -----------------------
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
+
+      this.setupOutsideClickClose();
+
       setTimeout(() => {
         this.initTestimonialSlider();
         this.initGallerySlider1();
@@ -39,9 +82,9 @@ export class Home implements AfterViewInit {
     }
   }
 
-  // --------------------------------
-  //  TESTIMONIAL SLIDER
-  // --------------------------------
+  // -----------------------
+  // SLIDER 1 - TESTIMONIAL
+  // -----------------------
   private initTestimonialSlider(): void {
     const mainSlider = document.querySelector('.testi_main-slider');
     const thumbSlider = document.querySelector('.testi_thumbnail-slider');
@@ -89,9 +132,9 @@ export class Home implements AfterViewInit {
     thumbs.mount();
   }
 
-  // --------------------------------
-  // GALLERY SLIDER 1
-  // --------------------------------
+  // -----------------------
+  // SLIDER 2 - GALLERY MARQUEE 1
+  // -----------------------
   private initGallerySlider1(): void {
     const el = document.getElementById('Gallerymarqee1');
     if (!el) return;
@@ -116,9 +159,9 @@ export class Home implements AfterViewInit {
     }).mount((window as any).splide.Extensions);
   }
 
-  // --------------------------------
-  // GALLERY SLIDER 2 (RTL)
-  // --------------------------------
+  // -----------------------
+  // SLIDER 3 - GALLERY MARQUEE 2 (RTL)
+  // -----------------------
   private initGallerySlider2(): void {
     const el = document.getElementById('Gallerymarqee2');
     if (!el) return;
@@ -143,4 +186,5 @@ export class Home implements AfterViewInit {
       }
     }).mount((window as any).splide.Extensions);
   }
+
 }
