@@ -62,16 +62,14 @@ function initFancybox() {
     transitionEffect: 'fade'
   });
 }
-////////Anchor for footer links
-private scrollToFragment(fragment: string): void {
-  const element = document.getElementById(fragment);
-  if (element) {
-    const yOffset = -50; // Adjust this value based on your header height
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    
-    window.scrollTo({
-      top: y,
-      behavior: 'smooth'
-    });
-  }
-}
+
+// FAQ Accordion
+$(document).ready(function () {
+  $('.accordion').on('show.bs.collapse', function (e) {
+    $(e.target).closest('.accordion-item').addClass('active');
+  });
+
+  $('.accordion').on('hide.bs.collapse', function (e) {
+    $(e.target).closest('.accordion-item').removeClass('active');
+  });
+});

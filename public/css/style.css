@@ -271,13 +271,12 @@ ul.list__style2 li::before{ content: ""; width: 25px; min-width: 25px; height: 2
 .experience_item .img_box:hover img{ opacity: 1; transform: scale(1.05);}
 
 /* Tariff */
-.tariff__sec{ background:#FFFCEA;}
-.tariff_item{ margin: 0; background: var(--whiteColor);}
+.tariff_item{ margin: 0;}
 .tariff_item figure{ width: 100%; height: 350px; position: relative; overflow: hidden; margin-bottom: 25px;}
 .tariff_item figure img{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; transition: all .6s; object-fit: cover;}
 .tariff_item:hover img{ transform: scale(1.05);}
-.tariff_item h4{ margin: 0 0 15px;font-family: 'EuroSansPro'; font-size: 26px; padding-left: 15px;}
-.tariff_item .price{ margin: 0 0 20px; font-size: 20px; font-weight: 600; color: var(--secondaryColor);padding-left: 15px;}
+.tariff_item h4{ margin: 0 0 15px;}
+.tariff_item .price{ margin: 0 0 20px; font-size: 20px; font-weight: 600; color: var(--secondaryColor);}
 .tariff_item .price small{ color: var(--grayColor); font-size: 17px; font-weight: 400;}
 .tariff_item:hover h4 a{ color: var(--secondaryColor);}
 
@@ -321,12 +320,12 @@ ul.list__style2 li::before{ content: ""; width: 25px; min-width: 25px; height: 2
 .testi-slider .splide__arrows--ttb .splide__arrow--next{ bottom: 0; background: url(../images/slider-ttb_arrow2.svg) no-repeat center center; background-size: 100% auto;}
 
 /* Spotlight */
-.spotlight__sec{ background:#FFFCEA;}
+.spotlight__sec{ background: var(--lightColor);}
 .spotlight_item{ margin: 0; position: relative;}
 .spotlight_item figure{ display: flex; margin: 0;}
-.spotlight_item figure img{ height: 611px; object-fit: cover; width: 100%;border-radius: 15px;}
+.spotlight_item figure img{ height: 611px; object-fit: cover; width: 100%;}
 .spotlight_item .caption{ padding: 50px 70px; position: absolute; left: 0; bottom: 0; width: 100%; z-index: 2; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;}
-.spotlight_item .caption::after{ content: ""; width: 100%; height: 120%; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.35) 80%, rgba(0,0,0,0) 100%); position: absolute; left: 0; bottom: 0; z-index: -1; transition: all .3s;border-radius: 15px;}
+.spotlight_item .caption::after{ content: ""; width: 100%; height: 120%; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.35) 80%, rgba(0,0,0,0) 100%); position: absolute; left: 0; bottom: 0; z-index: -1; transition: all .3s;}
 .spotlight_item h3 a{ color: var(--whiteColor);}
 .spotlight_item h3 a:hover{ color: var(--primaryColor);}
 .spotlight_item p{ color: var(--whiteColor); margin-bottom: 0;}
@@ -590,15 +589,13 @@ ul.disc_list li{ margin: 10px 0; padding: 0 0 0 4px; line-height: 25px; font-wei
 
 /* FAQ */
 .faq__accordion.accordion { max-width: 1220px; width: 100%; margin: 0 auto; padding: 0; border: none; border-radius: 0;}
-.faq__accordion .accordion-item{ border-radius: 0; border: none; margin-bottom: 15px; background: var(--lightColor); transition:all .1s ease-in-out;}
+.faq__accordion .accordion-item{ border-radius: 0; border: none; margin-bottom: 15px; background: var(--lightColor); transition:all .3s ease-in-out;}
 .faq__accordion .accordion-item:last-child{ margin-bottom: 0;}
-.faq__accordion .accordion-button{ padding: 18px 20px; gap: 15px; font-size: 20px; font-weight: 600; color: var(--titleColor); background: none; box-shadow:none; border: none; outline: none; transition:all .1s ease-in-out;}
-.faq__accordion .accordion-item.active .accordion-button{color: var(--whiteColor);}
-.faq__accordion .accordion-button:not(.collapsed){ color: var(--secondaryColor);  padding-bottom: 12px;}
-/*.faq__accordion .accordion-button:not(.collapsed)::after{ filter: brightness(0) invert(1);}*/
+.faq__accordion .accordion-button{ padding: 18px 20px; gap: 15px; font-size: 20px; font-weight: 600; color: var(--titleColor); background: none; box-shadow:none; border: none; outline: none; transition:all .3s ease-in-out;}
+.faq__accordion .accordion-button:not(.collapsed){ color: var(--whiteColor); padding-bottom: 12px;}
+.faq__accordion .accordion-button:not(.collapsed)::after{ filter: brightness(0) invert(1);}
 .faq__accordion .accordion-item.active{ background: var(--secondaryColor);}
 .faq__accordion .accordion-body { border: none; padding: 0 20px 22px; color: var(--whiteColor); line-height: normal;}
-.faq__accordion .accordion-item.active .accordion-button::after{filter: brightness(0) invert(1);}
 
 /*=============================
         Contact page
@@ -624,9 +621,9 @@ ul.disc_list li{ margin: 10px 0; padding: 0 0 0 4px; line-height: 25px; font-wei
         Gallery page
 =============================*/
 .gallery-filter { margin-bottom: 35px; display: flex; gap:5px 10px; flex-wrap: wrap; justify-content: center;}
-.gallery-filter button,.gallery-filter a { background: none; border: none; padding: 8px 20px; text-align: center; margin: 0; cursor: pointer; font-size: 17px; font-weight: 500; color: var(--titleColor);}
-.gallery-filter button:not(.active):hover,.gallery-filter a:not(.active):hover{ color: var(--secondaryColor);}
-.gallery-filter button.active,.gallery-filter a.active { background: var(--secondaryColor); color: var(--whiteColor);}
+.gallery-filter button { background: none; border: none; padding: 8px 20px; text-align: center; margin: 0; cursor: pointer; font-size: 17px; font-weight: 500; color: var(--titleColor);}
+.gallery-filter button:not(.active):hover{ color: var(--secondaryColor);}
+.gallery-filter button.active { background: var(--secondaryColor); color: var(--whiteColor);}
 .gallery-container{ margin-bottom: 35px;}
 .gallery-item a{ display: flex; height: 100%;}
 .gallery-item img { width: 100%; display: block; object-fit: cover;}

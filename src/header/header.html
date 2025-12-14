@@ -3,71 +3,62 @@
 	<nav class="navbar navbar-expand-xl navbar-light p-0">
 		<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
 		<div class="d-flex position-relative order-xl-3 align-items-center nav-btnss">
-			<!--<a matButton="filled" href="#" class="ph_btn d-none d-xl-inline-flex"><img src="images/ph-ic.svg" alt=""> +91-8958988800</a>-->
+			<a matButton="filled" href="#" class="ph_btn d-none d-xl-inline-flex"><img src="images/ph-ic.svg" alt=""> +91-8958988800</a>
 			<a matButton="filled" routerLink="/book-a-room" class="book_btn d-none d-xl-inline-flex">Book a Room</a>
-			<button class="btn border-0 navbar-toggler p-0" type="button" data-bs-toggle="offcanvas"
-				data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+			<button class="btn border-0 navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"  aria-controls="offcanvasExample">
 				<span class="visually-hidden">Toggle Navigation</span>
 				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="26" viewBox="0 0 40 26" fill="none">
-					<rect x="9" y="22" width="30" height="3" fill="#101010" />
-					<rect y="11" width="30" height="3" fill="#101010" />
-					<rect x="9" width="30" height="3" fill="#101010" />
+					<rect x="9" y="22" width="30" height="3" fill="#101010"/>
+					<rect y="11" width="30" height="3" fill="#101010"/>
+					<rect x="9" width="30" height="3" fill="#101010"/>
 				</svg>
 			</button>
 		</div>
-		<div class="offcanvas offcanvas-end-xl" tabindex="-1" id="offcanvasExample"
-			aria-labelledby="offcanvasExampleLabel">
+		<div class="offcanvas offcanvas-end-xl" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 			<div class="offcanvas-header d-flex d-xl-none justify-content-end">
 				<a href="#" class="text-reset p-0" data-bs-dismiss="offcanvas" aria-label="close">
-					<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#000" class="bi bi-x-circle"
-						viewBox="0 0 16 16">
-						<path
-							d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#000"
+						class="bi bi-x-circle" viewBox="0 0 16 16">
+						<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
 					</svg>
 				</a>
 			</div>
-			<div
-				class="offcanvas-body pt-0 px-3 px-xl-0 pb-3 pb-xl-0 d-flex flex-column justify-content-between justify-content-xl-center">
-
+			<div class="offcanvas-body pt-0 px-3 px-xl-0 pb-3 pb-xl-0 d-flex flex-column justify-content-between justify-content-xl-center">
 				<ul class="navbar-nav ms-xl-auto">
-					<li class="nav-item">
-						<a class="nav-link active" routerLink="/" routerLinkActive="active"
-							(click)="closeMenu()">Home</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" routerLink="/about-us" routerLinkActive="active" (click)="closeMenu()">About
-							Us</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" routerLink="/accommodation" (click)="closeMenu()">Rooms & Cottages</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" routerLink="/facilities" (click)="closeMenu()">Facilities</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" routerLink="/weddings" (click)="closeMenu()">Weddings</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" routerLink="/gallery" (click)="closeMenu()">Gallery</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" routerLink="/contact" (click)="closeMenu()">Contact</a>
-					</li>
+					<li class="nav-item"><a class="nav-link active" routerLink="/" routerLinkActive="active">Home</a></li>
+					<li class="nav-item"><a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a></li>
+					<li class="nav-item"><a class="nav-link" routerLink="/accommodation" >Rooms & Cottages</a></li>
+					<!-- <li class="nav-item dropdown">
+						<a routerLink="/accommodation" class="nav-link">Rooms & Cottages</a>
+						<a href="#" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" routerLink="/superior">Superior</a></li>
+							<li><a class="dropdown-item" routerLink="/classic-cottages">Classic Cottages</a></li>
+							<li><a class="dropdown-item" routerLink="/premium-cottages">Premium Cottages</a></li>
+							<li><a class="dropdown-item" routerLink="/plunge-pool">Plunge Pool</a></li>
+						</ul>
+					</li>		 -->
+					<!-- <li class="nav-item dropdown">
+						<a routerLink="/facilities" class="nav-link">Facilities</a>
+						<a href="#" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" routerLink="/bumper-car">Bumper Car</a></li>
+							<li><a class="dropdown-item" routerLink="/spa">SPA</a></li>
+							<li><a class="dropdown-item" routerLink="/discotheque">Discotheque</a></li>
+							<li><a class="dropdown-item" routerLink="/gym">Gym</a></li>
+							<li><a class="dropdown-item" routerLink="/water-park">Water Park</a></li>
+							<li><a class="dropdown-item" routerLink="/movie-theater">Movie Theater</a></li>
+							<li><a class="dropdown-item" routerLink="/indoor-outdoor-sports">Indoor & Outdoor Sports</a></li>
+						</ul>
+					</li>		 -->
+					<li class="nav-item"><a class="nav-link" routerLink="/facilities">Facilities</a></li>
+					<li class="nav-item"><a class="nav-link" routerLink="/weddings">Weddings</a></li>
+					<li class="nav-item"><a class="nav-link" routerLink="/gallery">Gallery</a></li>
+					<li class="nav-item"><a class="nav-link" routerLink="/contact">Contact</a></li>
 				</ul>
 				<div class="flex-column mt-3 gap-3 d-flex d-xl-none">
-					<a matButton="filled" href="tel: +91-8958988800" class="ph_btn m-0"><img src="images/ph-ic.svg"
-							alt=""> Call Now</a>
-					<a matButton="filled"
-						href="https://wa.me/918958988800?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20resorts."
-						class="ph_btn m-0"> <img src="images/ph-ic.svg" alt=""> WhatsApp Now</a>
-					<a matButton="filled" routerLink="/book-a-room" class="book_btn m-0" (click)="closeMenu()">Book a
-						Room</a>
+					<a matButton="filled" href="#" class="ph_btn m-0"><img src="images/ph-ic.svg" alt=""> +91-8958988800</a>
+					<a matButton="filled" routerLink="/book-a-room" class="book_btn m-0">Book a Room</a>
 				</div>
 			</div>
 		</div>
