@@ -33,6 +33,7 @@
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@angular/ssr": "^20.3.3",
+    "@fontsource/poppins": "^5.2.7",
     "express": "^5.1.0",
     "jquery": "^3.7.1",
     "rxjs": "~7.8.0",
