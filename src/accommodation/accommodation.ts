@@ -1,7 +1,9 @@
-import { Component, ChangeDetectionStrategy, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, ChangeDetectionStrategy, AfterViewInit, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 declare var Splide: any;
 
@@ -13,9 +15,26 @@ declare var Splide: any;
   providers: [provideNativeDateAdapter()],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Accommodation implements AfterViewInit {
+export class Accommodation implements OnInit, AfterViewInit {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+    private route: ActivatedRoute,
+    private router: Router,
+    private viewportScroller: ViewportScroller
+  ) {}
+
+  ngOnInit(): void {
+    // Listen for fragment changes in the URL
+    this.route.fragment.subscribe(fragment => {
+      if (fragment && isPlatformBrowser(this.platformId)) {
+        // Delay slightly to ensure DOM is ready
+        setTimeout(() => {
+          this.scrollToFragment(fragment);
+        }, 100);
+      }
+    });
+  }
 
   ngAfterViewInit(): void {
     // Only run in browser (SSR safe)
@@ -23,8 +42,75 @@ export class Accommodation implements AfterViewInit {
       setTimeout(() => {
         this.initSliders();         // Accommodation sliders
         this.initReviewSliders();   // Review sliders
+        
+        // Check for fragment on initial load
+        this.handleInitialFragment();
       }, 300);
     }
+  }
+
+  /**
+   * Handle fragment on initial page load
+   */
+  private handleInitialFragment(): void {
+    const fragment = this.route.snapshot.fragment;
+    if (fragment) {
+      // Additional delay for initial load to ensure everything is rendered
+      setTimeout(() => {
+        this.scrollToFragment(fragment);
+      }, 500);
+    }
+  }
+
+  /**
+   * Scroll to a specific fragment/anchor
+   */
+  private scrollToFragment(fragment: string): void {
+    try {
+      // First try Angular's viewportScroller
+      this.viewportScroller.scrollToAnchor(fragment);
+      
+      // Fallback: Check if element exists and scroll manually
+      setTimeout(() => {
+        const element = document.getElementById(fragment);
+        if (element) {
+          // Smooth scroll to the element
+          element.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start',
+            inline: 'nearest'
+          });
+          
+          // Add a visual highlight effect (optional)
+          this.highlightElement(element);
+        } else {
+          console.warn(`Element with id "${fragment}" not found`);
+        }
+      }, 50);
+    } catch (error) {
+      console.error('Error scrolling to fragment:', error);
+    }
+  }
+
+  /**
+   * Add a temporary highlight effect to the target element
+   */
+  private highlightElement(element: HTMLElement): void {
+    // Save original background color
+    const originalBgColor = element.style.backgroundColor;
+    const originalTransition = element.style.transition;
+    
+    // Add highlight effect
+    element.style.transition = 'background-color 1s ease';
+    element.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+    
+    // Remove highlight after 1.5 seconds
+    setTimeout(() => {
+      element.style.backgroundColor = originalBgColor;
+      setTimeout(() => {
+        element.style.transition = originalTransition;
+      }, 1000);
+    }, 1500);
   }
 
   // ----------------------------
