@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'EuroSansPro';
+    font-family: "Poppins", sans-serif;
     src: url('../fonts/EuroSansPro-Bol.eot');
     src: url('../fonts/EuroSansPro-Bol.eot?#iefix') format('embedded-opentype'), url('../fonts/EuroSansPro-Bol.woff2') format('woff2'), url('../fonts/EuroSansPro-Bol.woff') format('woff'), url('../fonts/EuroSansPro-Bol.ttf') format('truetype'), url('../fonts/EuroSansPro-Bol.svg#EuroSansPro-Bol') format('svg');
     font-weight: bold;

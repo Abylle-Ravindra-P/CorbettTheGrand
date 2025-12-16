@@ -4,5 +4,5 @@
 @import "@fontsource/poppins/500.css";
 @import "@fontsource/poppins/600.css";
 
-html, body { height: 100%; font-family: "Poppins", sans-serif;}
+html, body { height: 100%; font-family: "Poppins", sans-serif; font-style:italic; font-weight: 500;}
 body { margin: 0; font-family: "Poppins", sans-serif; }
